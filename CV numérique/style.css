@@ -321,3 +321,120 @@ body {
         text-align: center;
     }
 }
+
+/* ---------- NAVIGATION ---------- */
+
+.site-nav {
+    background: var(--card-bg);
+    border-bottom: 1px solid rgba(148, 163, 184, 0.35);
+    box-shadow: 0 4px 15px rgba(15, 23, 42, 0.08);
+}
+
+.nav-inner {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 28px;
+    padding: 12px 0;
+    margin: 0;
+}
+
+.nav-list a {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: var(--text-main);
+    transition: color 0.2s ease, transform 0.15s ease;
+}
+
+body.dark .nav-list a {
+    color: var(--text-invert);
+}
+
+.nav-list a:hover {
+    color: var(--accent);
+    transform: translateY(-1px);
+}
+
+.nav-list a.active {
+    color: var(--accent);
+    font-weight: 600;
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 2px;
+}
+
+/* ---------- TIMELINE ---------- */
+
+.timeline {
+    position: relative;
+    margin: 40px auto;
+    padding-left: 20px;
+    border-left: 3px solid var(--accent);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+    padding-left: 20px;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -11px;
+    top: 6px;
+    width: 16px;
+    height: 16px;
+    background: var(--accent);
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px var(--card-bg);
+    border: 2px solid var(--accent-soft);
+}
+
+.timeline-date {
+    font-weight: bold;
+    color: var(--accent);
+    margin-bottom: 6px;
+    font-size: 0.95rem;
+}
+
+.timeline-content h3 {
+    margin: 0 0 4px;
+    font-size: 1rem;
+    color: var(--text-main);
+}
+
+.timeline-location {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+}
+
+.timeline-content ul {
+    margin: 6px 0 0 18px;
+    color: var(--text-main);
+    font-size: 0.9rem;
+}
+
+.timeline-content p {
+    font-size: 0.9rem;
+}
+
+/* Mode sombre - Timeline */
+body.dark .timeline {
+    border-left: 3px solid var(--accent);
+}
+
+body.dark .timeline-date {
+    color: var(--accent);
+}
+
+body.dark .timeline-item::before {
+    background: var(--accent);
+    border-color: var(--accent-soft);
+    box-shadow: 0 0 0 4px var(--card-bg);
+}
