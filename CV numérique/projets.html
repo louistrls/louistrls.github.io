@@ -5,6 +5,17 @@
     <title>Projets – Louis Treels</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const current = location.pathname.split("/").pop();
+            document.querySelectorAll(".nav-list a").forEach(link => {
+                if (link.getAttribute("href") === current) {
+                    link.classList.add("active");
+                }
+            });
+        });
+    </script>
 </head>
 <body>
 
@@ -33,6 +44,7 @@
     </div>
 </header>
 
+<!-- NAVIGATION -->
 <nav class="site-nav">
     <div class="container nav-inner">
         <ul class="nav-list">
@@ -47,11 +59,105 @@
     </div>
 </nav>
 
+<!-- CONTENU -->
 <main class="container">
+
+    <!-- Intro -->
     <section class="card">
-        <h2>Projets Académiques et Personnels</h2>
-        <p>Ici tu mettras ton contenu.</p>
+        <h2>Projets Académiques & Personnels</h2>
+        <p>Voici les projets qui ont marqué mon parcours, entre réalisations académiques, défis techniques et explorations personnelles.</p>
     </section>
+
+    <!-- SECTION PROJETS ACADEMIQUES -->
+    <section class="project-section">
+        <h3 class="project-section-title">Projets Académiques</h3>
+
+        <div class="project-grid">
+
+            <!-- Projet 1 -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h4>Nom du projet académique 1</h4>
+                    <span class="project-tag">Java / JavaFX</span>
+                </div>
+                <p class="project-desc">
+                    Brève description du projet (placeholder).  
+                </p>
+                <a href="#" class="project-link">Voir le projet</a>
+            </div>
+
+            <!-- Projet 2 -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h4>Nom du projet académique 2</h4>
+                    <span class="project-tag">Python</span>
+                </div>
+                <p class="project-desc">
+                    Brève description du projet (placeholder).
+                </p>
+                <a href="#" class="project-link">Voir le projet</a>
+            </div>
+
+            <!-- Projet 3 -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h4>Nom du projet académique 3</h4>
+                    <span class="project-tag">HTML / CSS</span>
+                </div>
+                <p class="project-desc">
+                    Brève description du projet (placeholder).
+                </p>
+                <a href="#" class="project-link">Voir le projet</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION PROJETS PERSONNELS -->
+    <section class="project-section">
+        <h3 class="project-section-title">Projets Personnels</h3>
+
+        <div class="project-grid">
+
+            <!-- Projet perso 1 -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h4>Nom du projet personnel 1</h4>
+                    <span class="project-tag">Unity / C#</span>
+                </div>
+                <p class="project-desc">
+                    Brève description du projet (placeholder).
+                </p>
+                <a href="#" class="project-link">Voir le projet</a>
+            </div>
+
+            <!-- Projet perso 2 -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h4>Nom du projet personnel 2</h4>
+                    <span class="project-tag">Technologies utilisées</span>
+                </div>
+                <p class="project-desc">
+                    Brève description du projet (placeholder).
+                </p>
+                <a href="#" class="project-link">Voir le projet</a>
+            </div>
+
+            <!-- Projet perso 3 -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h4>Nom du projet personnel 3</h4>
+                    <span class="project-tag">Technos</span>
+                </div>
+                <p class="project-desc">
+                    Brève description du projet (placeholder).
+                </p>
+                <a href="#" class="project-link">Voir le projet</a>
+            </div>
+
+        </div>
+    </section>
+
 </main>
 
 </body>

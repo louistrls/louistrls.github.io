@@ -2,15 +2,26 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Expérience – Louis Treels</title>
+    <title>Expérience Professionnelle – Louis Treels</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const current = location.pathname.split("/").pop();
+            document.querySelectorAll(".nav-list a").forEach(link => {
+                if (link.getAttribute("href") === current) {
+                    link.classList.add("active");
+                }
+            });
+        });
+    </script>
 </head>
 <body>
 
 <!-- HEADER -->
 <header class="site-header">
-    <div class="header-inner container">
+  <div class="header-inner container">
         <div class="profile-block">
             <div class="avatar">
                 <img src="assets/img/portrait.jpg" alt="Louis Treels">
@@ -30,9 +41,10 @@
                 🌙
             </button>
         </div>
-    </div>
+  </div>
 </header>
 
+<!-- NAVIGATION -->
 <nav class="site-nav">
     <div class="container nav-inner">
         <ul class="nav-list">
@@ -47,11 +59,79 @@
     </div>
 </nav>
 
+<!-- CONTENU -->
 <main class="container">
+
+    <!-- INTRO -->
     <section class="card">
         <h2>Expérience Professionnelle</h2>
-        <p>Ici tu mettras ton contenu.</p>
+        <p>Voici un aperçu de mes expériences professionnelles, des missions réalisées et des compétences développées au fil de mon parcours.</p>
     </section>
+
+    <!-- EXPERIENCE LIST -->
+    <section class="experience-list">
+
+        <!-- EXPERIENCE 1 -->
+        <div class="experience-card">
+            <div class="experience-header">
+                <h3>Nom du poste (placeholder)</h3>
+                <span class="experience-date">Dates</span>
+            </div>
+            <p class="experience-company">Nom de l'entreprise – Ville</p>
+
+            <ul class="experience-details">
+                <li>Responsabilité / mission 1</li>
+                <li>Responsabilité / mission 2</li>
+                <li>Responsabilité / mission 3</li>
+            </ul>
+
+            <div class="experience-skills">
+                <span class="skill-tag">Skill 1</span>
+                <span class="skill-tag">Skill 2</span>
+                <span class="skill-tag">Skill 3</span>
+            </div>
+        </div>
+
+        <!-- EXPERIENCE 2 -->
+        <div class="experience-card">
+            <div class="experience-header">
+                <h3>Nom du poste (placeholder)</h3>
+                <span class="experience-date">Dates</span>
+            </div>
+            <p class="experience-company">Nom de l'entreprise – Ville</p>
+
+            <ul class="experience-details">
+                <li>Responsabilité / mission 1</li>
+                <li>Responsabilité / mission 2</li>
+            </ul>
+
+            <div class="experience-skills">
+                <span class="skill-tag">Compétence</span>
+                <span class="skill-tag">Compétence</span>
+            </div>
+        </div>
+
+        <!-- EXPERIENCE 3 -->
+        <div class="experience-card">
+            <div class="experience-header">
+                <h3>Nom du poste (placeholder)</h3>
+                <span class="experience-date">Dates</span>
+            </div>
+            <p class="experience-company">Nom de l'entreprise – Ville</p>
+
+            <ul class="experience-details">
+                <li>Responsabilité 1</li>
+                <li>Responsabilité 2</li>
+            </ul>
+
+            <div class="experience-skills">
+                <span class="skill-tag">Soft skill</span>
+                <span class="skill-tag">Hard skill</span>
+            </div>
+        </div>
+
+    </section>
+
 </main>
 
 </body>

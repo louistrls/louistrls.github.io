@@ -5,12 +5,23 @@
     <title>Centres d'intérêts – Louis Treels</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const current = location.pathname.split("/").pop();
+            document.querySelectorAll(".nav-list a").forEach(link => {
+                if (link.getAttribute("href") === current) {
+                    link.classList.add("active");
+                }
+            });
+        });
+    </script>
 </head>
 <body>
 
 <!-- HEADER -->
 <header class="site-header">
-    <div class="header-inner container">
+  <div class="header-inner container">
         <div class="profile-block">
             <div class="avatar">
                 <img src="assets/img/portrait.jpg" alt="Louis Treels">
@@ -30,9 +41,10 @@
                 🌙
             </button>
         </div>
-    </div>
+  </div>
 </header>
 
+<!-- NAVIGATION -->
 <nav class="site-nav">
     <div class="container nav-inner">
         <ul class="nav-list">
@@ -47,11 +59,55 @@
     </div>
 </nav>
 
+<!-- CONTENU -->
 <main class="container">
+
     <section class="card">
         <h2>Centres d'intérêts</h2>
-        <p>Ici tu mettras ton contenu.</p>
+        <p>Voici un aperçu de mes centres d’intérêt personnels, qui contribuent à mon équilibre et à ma créativité au quotidien.</p>
     </section>
+
+    <!-- Interest Cards -->
+    <section class="interests-grid">
+
+        <div class="interest-card">
+            <div class="interest-icon">🎵</div>
+            <h4>Musique</h4>
+            <p>Écoute quotidienne, créations playlist, découverte d’artistes.</p>
+        </div>
+
+        <div class="interest-card">
+            <div class="interest-icon">🎮</div>
+            <h4>Jeux vidéo</h4>
+            <p>Passion pour les univers narratifs, jeux compétitifs et game design.</p>
+        </div>
+
+        <div class="interest-card">
+            <div class="interest-icon">🏋️‍♂️</div>
+            <h4>Sport & musculation</h4>
+            <p>Routine régulière, discipline et recherche de progression.</p>
+        </div>
+
+        <div class="interest-card">
+            <div class="interest-icon">🍳</div>
+            <h4>Cuisine</h4>
+            <p>Recettes maison, pâtisserie, découverte de nouvelles saveurs.</p>
+        </div>
+
+        <div class="interest-card">
+            <div class="interest-icon">✈️</div>
+            <h4>Voyages</h4>
+            <p>Découverte de nouvelles cultures et paysages.</p>
+        </div>
+
+        <div class="interest-card">
+            <div class="interest-icon">📚</div>
+            <h4>Lecture</h4>
+            <p>Développement personnel, nouvelles connaissances, détente.</p>
+        </div>
+
+    </section>
+
 </main>
 
 </body>
