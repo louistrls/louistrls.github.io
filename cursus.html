@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Cursus Académique – Louis Treels</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Mise en surbrillance automatique de l'onglet -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const current = location.pathname.split("/").pop();
+            document.querySelectorAll(".nav-list a").forEach(link => {
+                if (link.getAttribute("href") === current) {
+                    link.classList.add("active");
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner container">
+        <div class="profile-block">
+            <div class="avatar">
+                <img src="assets/img/portrait.jpg" alt="Louis Treels">
+            </div>
+            <div>
+                <h1 class="name">Louis Treels</h1>
+                <p class="tagline">Computer Science Student – BUT Informatique</p>
+            </div>
+        </div>
+
+        <div class="header-actions">
+            <div class="contact-mini">
+                <span>📍 Lille, France</span>
+                <span>📧 <a href="mailto:louis.treels.pro@gmail.com">louis.treels.pro@gmail.com</a></span>
+            </div>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                🌙
+            </button>
+        </div>
+  </div>
+</header>
+
+<!-- NAVIGATION -->
+<nav class="site-nav">
+    <div class="container nav-inner">
+        <ul class="nav-list">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="cursus.html">Cursus Académique</a></li>
+            <li><a href="experience.html">Expérience Professionnelle</a></li>
+            <li><a href="projets.html">Projets Académiques & Personnels</a></li>
+            <li><a href="interets.html">Centres d'intérêts</a></li>
+            <li><a href="contacts.html">Contacts</a></li>
+            <li><a href="cv.html">CV</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- CONTENU -->
+<main class="container">
+
+    <section class="card">
+        <h2>Cursus Académique</h2>
+        <p>Voici un aperçu synthétique de mon parcours académique, présenté sous forme de frise chronologique retraçant les formations, projets et étapes majeures de mon évolution.</p>
+    </section>
+
+    <!-- FRISE CHRONOLOGIQUE -->
+    <section class="timeline">
+
+        <!-- ITEM 1 -->
+        <div class="timeline-item">
+            <div class="timeline-date">2024 – Aujourd'hui</div>
+            <div class="timeline-content card">
+                <h3>BUT Informatique</h3>
+                <p class="timeline-location">IUT A de Lille, 59491 Villeneuve d'Ascq</p>
+                <ul>
+                    <li>Parcours B - Déploiement d'applications communicantes et sécurisées</li>
+                    <li>Stage étude 2ème année - Instituto Politécnico de Coimbra, Portugal</li>
+                </ul>
+            </div>
+        </div>
+
+        
+        <!-- ITEM 2 -->
+        <div class="timeline-item">
+          <div class="timeline-date">2024</div>
+          <div class="timeline-content card">
+            <h3>Programme PEI Scientifique - SciencesPo Lille</h3>
+            <p class="timeline-location">École Nationale Supérieure de Chimie de Lille</p>
+            <ul>
+              <li>Premier prix - Soutenance orale - Thème "Onde et Matière"</li>
+              <li>Sujet défendu : "Le camouflage électromagnétique à l'aide des métamatériaux"</li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- ITEM 3 -->
+        <div class="timeline-item">
+            <div class="timeline-date">2021 – 2024</div>
+            <div class="timeline-content card">
+                <h3>Baccalauréat Général</h3>
+                <p class="timeline-location">Lycée privé Sainte-Marie, 59134 Beaucamps-Ligny</p>
+                <ul>
+                    <li>Spécialités Mathématiques et Numérique et Sciences de l'Informatique</li>
+                    <li>Admis mention Bien avec mention européenne (Anglais)</li>
+                </ul>
+            </div>
+        </div>
+
+    </section>
+
+</main>
+
+</body>
+</html>

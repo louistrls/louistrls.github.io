@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Contacts – Louis Treels</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const current = location.pathname.split("/").pop();
+            document.querySelectorAll(".nav-list a").forEach(link => {
+                if (link.getAttribute("href") === current) {
+                    link.classList.add("active");
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner container">
+        <div class="profile-block">
+            <div class="avatar">
+                <img src="assets/img/portrait.jpg" alt="Louis Treels">
+            </div>
+            <div>
+                <h1 class="name">Louis Treels</h1>
+                <p class="tagline">Computer Science Student – BUT Informatique</p>
+            </div>
+        </div>
+
+        <div class="header-actions">
+            <div class="contact-mini">
+                <span>📍 Lille, France</span>
+                <span>📧 <a href="mailto:louis.treels.pro@gmail.com">louis.treels.pro@gmail.com</a></span>
+            </div>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                🌙
+            </button>
+        </div>
+  </div>
+</header>
+
+<!-- NAVIGATION -->
+<nav class="site-nav">
+    <div class="container nav-inner">
+        <ul class="nav-list">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="cursus.html">Cursus Académique</a></li>
+            <li><a href="experience.html">Expérience Professionnelle</a></li>
+            <li><a href="projets.html">Projets Académiques & Personnels</a></li>
+            <li><a href="interets.html">Centres d'intérêts</a></li>
+            <li><a href="contacts.html">Contacts</a></li>
+            <li><a href="cv.html">CV</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- CONTENU -->
+<main class="container">
+
+    <!-- Intro -->
+    <section class="card">
+        <h2>Contacts</h2>
+        <p>Voici les moyens les plus simples et directs pour me contacter, que ce soit pour un échange professionnel, un projet ou toute autre demande.</p>
+    </section>
+
+    <!-- Grid de contacts -->
+    <section class="contact-grid">
+
+        <!-- Email -->
+        <div class="contact-card">
+            <div class="contact-icon">📧</div>
+            <h4>Email</h4>
+            <a class="contact-value" href="mailto:louis.treels@gmail.com">louis.treels@gmail.com</a>
+        </div>
+
+        <!-- Téléphone -->
+        <div class="contact-card">
+            <div class="contact-icon">📱</div>
+            <h4>Téléphone</h4>
+            <p class="contact-value">+33 7 88 58 33 78</p>
+        </div>
+
+        <!-- Localisation -->
+        <div class="contact-card">
+            <div class="contact-icon">📍</div>
+            <h4>Localisation</h4>
+            <p class="contact-value">Hérlies (59), France</p>
+        </div>
+
+        <!-- LinkedIn -->
+        <div class="contact-card">
+            <div class="contact-icon">💼</div>
+            <h4>LinkedIn</h4>
+            <a class="contact-value" href="#" target="_blank">linkedin.com/in/tonprofil</a>
+        </div>
+
+        <!-- GitHub -->
+        <div class="contact-card">
+            <div class="contact-icon">💻</div>
+            <h4>GitHub</h4>
+            <a class="contact-value" href="https://github.com/louistrls" target="_blank">github.com/louistrls</a>
+        </div>
+
+        <!-- Email pro optionnel -->
+        <div class="contact-card">
+            <div class="contact-icon">✉️</div>
+            <h4>Email professionnel (optionnel)</h4>
+            <p class="contact-value">contact@tondomaine.com</p>
+        </div>
+
+    </section>
+
+</main>
+
+</body>
+</html>
