@@ -78,8 +78,8 @@ p {
 }
 
 .avatar {
-    width: 64px;
-    height: 64px;
+    width: 85px;
+    height: 85px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -877,9 +877,14 @@ body.dark .interest-content.right {
     padding: 10px;         /* Un peu d'espace autour */
 }
 
-/* Optionnel : Si tu veux que le canvas soit toujours carré ou ait un ratio spécifique */
-canvas {
-    /* Chart.js gère généralement bien cela tout seul, 
-       mais assure-toi que le canvas n'a pas de height fixée en CSS dur 
-       qui pourrait déformer le ratio. */
+#competences {
+    width: 50%;
+}
+
+#competences h2 {
+    text-align: center;
+}
+
+.chart-wrapper {
+    margin: 0 0 0 20px;
 }
