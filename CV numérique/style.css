@@ -22,7 +22,7 @@ body.dark {
     --accent: #60a5fa;
     --accent-soft: #4b5563;
 
-    --text-main: #e5e7eb;
+    --text-main: #dbe0eb;
     --text-muted: #9ca3af;
     --text-invert: #f9fafb;
 
@@ -138,7 +138,7 @@ body {
 }
 
 .theme-toggle:hover {
-    transform: translateY(-1px);
+    transform: translateY(-3px);
     box-shadow: 0 8px 18px rgba(15, 23, 42, 0.45);
 }
 
@@ -322,6 +322,11 @@ body {
     }
 }
 
+
+
+
+
+
 /* ---------- NAVIGATION ---------- */
 
 .site-nav {
@@ -366,6 +371,13 @@ body.dark .nav-list a {
     border-bottom: 2px solid var(--accent);
     padding-bottom: 2px;
 }
+
+
+
+
+
+
+
 
 /* ---------- TIMELINE ---------- */
 
@@ -438,6 +450,13 @@ body.dark .timeline-item::before {
     border-color: var(--accent-soft);
     box-shadow: 0 0 0 4px var(--card-bg);
 }
+
+
+
+
+
+
+
 
 /* ---------- PROJECTS PAGE ---------- */
 
@@ -523,50 +542,16 @@ body.dark .project-card {
     border-color: rgba(148, 163, 184, 0.2);
 }
 
-/* ---------- INTERESTS PAGE ---------- */
 
-.interests-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 18px;
-    margin-top: 20px;
-}
 
-.interest-card {
-    background: var(--card-bg);
-    border-radius: var(--radius);
-    padding: 20px 16px;
-    text-align: center;
-    border: 1px solid rgba(148, 163, 184, 0.3);
-    box-shadow: var(--shadow-soft);
-    transition: transform 0.2s ease, box-shadow 0.3s ease;
-}
 
-.interest-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 25px rgba(15, 23, 42, 0.2);
-}
 
-.interest-icon {
-    font-size: 2.2rem;
-    margin-bottom: 10px;
-}
 
-.interest-card h4 {
-    margin-top: 6px;
-    margin-bottom: 6px;
-    font-size: 1rem;
-}
 
-.interest-card p {
-    font-size: 0.9rem;
-    color: var(--text-muted);
-}
 
-/* Dark mode */
-body.dark .interest-card {
-    border-color: rgba(148, 163, 184, 0.2);
-}
+
+
+
 
 /* ---------- EXPERIENCE PAGE ---------- */
 
@@ -651,6 +636,11 @@ body.dark .skill-tag {
     background: var(--accent-soft);
 }
 
+
+
+
+
+
 /* ---------- CONTACTS PAGE ---------- */
 
 .contact-grid {
@@ -699,4 +689,164 @@ body.dark .skill-tag {
 
 body.dark .contact-card {
     border-color: rgba(148, 163, 184, 0.2);
+}
+
+
+
+
+
+
+
+
+/* ---------- INTERESTS PAGE ---------- */
+
+.interests-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+    margin-top: 20px;
+}
+
+.interest-card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 20px 16px;
+    text-align: center;
+    border: 1px solid rgba(148, 163, 184, 0.3);
+    box-shadow: var(--shadow-soft);
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.interest-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(15, 23, 42, 0.2);
+}
+
+.interest-icon {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.interest-card h4 {
+    margin-top: 6px;
+    margin-bottom: 6px;
+    font-size: 1rem;
+}
+
+.interest-card p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+/* Dark mode */
+body.dark .interest-card {
+    border-color: rgba(148, 163, 184, 0.2);
+}
+
+.interests-section {
+    width: 100%;
+    padding: 40px 0;
+}
+
+/* ===== LIGNE ===== */
+.interest-row {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    margin: 40px 0;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+/* ===== CARROUSEL EN FOND ===== */
+.interest-carousel {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.carousel-track {
+    display: flex;
+    width: 300%;
+    height: 100%;
+    animation: scroll-carousel 18s linear infinite;
+}
+
+.carousel-track img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.85;
+}
+
+/* Animation du carrousel */
+@keyframes scroll-carousel {
+    0% { transform: translateX(0); }
+    33% { transform: translateX(-33.33%); }
+    66% { transform: translateX(-66.66%); }
+    100% { transform: translateX(0); }
+}
+
+/* ===== CONTENU PAR-DESSUS ===== */
+.interest-content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40%;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(4px);
+    border-radius: 10px;
+    z-index: 2;
+}
+
+.interest-content.left {
+    left: 20px;
+}
+
+body.dark .interest-content.left {
+    background-color: #111827;
+}
+
+.interest-content.right {
+    right: 20px;
+}
+
+body.dark .interest-content.right {
+    background-color: #111827;
+}
+
+.interest-content h3 {
+    margin: 0 0 10px;
+    font-size: 22px;
+}
+
+.interest-content p {
+    margin: 0;
+    font-size: 15px;
+}
+
+
+
+
+
+
+
+
+
+/* ---------- CV PAGE ---------- */
+
+.card {
+    margin: 10px;
+}
+
+
+
+
+
+/* ---------- CURSUS PAGE ---------- */
+
+.logo-timeline {
+    width: 10%;
 }
