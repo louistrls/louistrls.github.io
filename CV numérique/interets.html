@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Centres d'intérêts – Louis Treels</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const current = location.pathname.split("/").pop();
+            document.querySelectorAll(".nav-list a").forEach(link => {
+                if (link.getAttribute("href") === current) {
+                    link.classList.add("active");
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner container">
+        <div class="profile-block">
+            <div class="avatar">
+                <img src="assets/img/portrait.jpg" alt="Louis Treels">
+            </div>
+            <div>
+                <h1 class="name">Louis Treels</h1>
+                <p class="tagline">Computer Science Student – BUT Informatique</p>
+            </div>
+        </div>
+
+        <div class="header-actions">
+            <div class="contact-mini">
+                <span>📍 Lille, France</span>
+                <span>📧 <a href="mailto:louis.treels.pro@gmail.com">louis.treels.pro@gmail.com</a></span>
+            </div>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                🌙
+            </button>
+        </div>
+  </div>
+</header>
+
+<!-- NAVIGATION -->
+<nav class="site-nav">
+    <div class="container nav-inner">
+        <ul class="nav-list">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="cursus.html">Cursus Académique</a></li>
+            <li><a href="experience.html">Expérience Professionnelle</a></li>
+            <li><a href="projets.html">Projets Académiques & Personnels</a></li>
+            <li><a href="interets.html">Centres d'intérêts</a></li>
+            <li><a href="contacts.html">Contacts</a></li>
+            <li><a href="cv.html">CV</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- CONTENU -->
+<main class="container">
+
+    <section class="card">
+        <h2>Centres d'intérêts</h2>
+        <p>Voici un aperçu de mes centres d’intérêt personnels, qui contribuent à mon équilibre et à ma créativité au quotidien.</p>
+    </section>
+
+    <!-- Interest Cards -->
+    <section class="interests-section">
+        <h2>Centres d'intérêts</h2>
+
+        <!-- ======= Musique ======= -->
+        <div class="interest-row">
+            <div class="interest-carousel">
+                <div class="carousel-track">
+                    <img src="assets/img/kanye.webp" alt="Kanye West">
+                    <img src="assets/img/MJ.jpg" alt="Michael Jackson">
+                    <img src="assets/img/daftPunk.avif" alt="Datf Punk">
+                    <img src="assets/img/travis.webp" alt="Travis Scott">
+                    <img src="assets/img/theweeknd.jpg" alt="The Weeknd">
+                    <img src="assets/img/tyler.webp" alt="Tyler, the creator">
+                    <img src="assets/img/gorillaz.webp" alt="Gorillaz">
+                    <img src="assets/img/JID.webp" alt="J.I.D">
+                    <img src="assets/img/TameImpala.jpg" alt="Tame Impala">
+                    <img src="assets/img/Kendrick.jpg" alt="Kendrick Lamar">
+                </div>
+            </div>
+
+            <div class="interest-content left">
+                <h3>Musique</h3>
+                <p>Écoute quotidienne, création de playlists, découverte d’artistes et exploration de genres variés.</p>
+            </div>
+        </div>
+
+        <!-- ======= Jeux vidéo ======= -->
+        <div class="interest-row">
+            <div class="interest-carousel">
+                <div class="carousel-track">
+                    <img src="assets/img/dark_souls3.avif" alt="Dark Souls 3">
+                    <img src="assets/img/balatro.jpg" alt="Balatro">
+                    <img src="assets/img/spiderman.jpeg" alt="SpiderMan Remastrered">
+                    <img src="assets/img/go_of_war.jpeg" alt="God Of War">
+                    <img src="assets/img/battlefield.jpg" alt="Battlefield RedSec">
+                    <img src="assets/img/fortnite.avif" alt="Fortnite">
+                    <img src="assets/img/minecraft.jpg" alt="Minecraft">
+                    <img src="assets/img/LiesOfP.avif" alt="Lies Of P">
+                    <img src="assets/img/GOT.avif" alt="ghost Of Tsushima">
+                    <img src="assets/img/marioKartWii.jpg" alt="Mario Kart Wii">
+                </div>
+            </div>
+
+            <div class="interest-content right">
+                <h3>Jeux vidéo</h3>
+                <p>Ma passion depuis tout jeune. J'apprécie particulièrement les jeux contenant une histoire riche et une difficulté absurde, avec des mécaniques intéressantes.</p>
+            </div>
+        </div>
+
+        <!-- ======= Sport et musculation ======= -->
+        <div class="interest-row">
+            <div class="interest-carousel">
+                <div class="carousel-track">
+                    <img src="assets/img/musculation.png" alt="Musculation">
+                    <img src="assets/img/football.jpg" alt="Football">
+                    <img src="assets/img/natation.jpg" alt="Natation">
+                    <img src="assets/img/badminton.webp" alt="Badminton">
+                    <img src="assets/img/karting.jpg" alt="Karting">
+                </div>
+            </div>
+
+            <div class="interest-content left">
+                <h3>Sport</h3>
+                <p>Routine régulière, discipline, progression et bien-être physique comme mental.</p>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+</body>
+</html>
