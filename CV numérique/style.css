@@ -44,6 +44,10 @@ body {
     line-height: 1.5;
 }
 
+p {
+    text-align: justify;
+}
+
 /* ---------- Layout global ---------- */
 .container {
     width: 100%;
@@ -849,4 +853,33 @@ body.dark .interest-content.right {
 
 .logo-timeline {
     width: 10%;
+}
+
+
+/* ---------- CONTACTS PAGE ---------- */
+
+.contact-grid {
+    margin: 120px 0 120px 0;
+}
+
+
+
+
+
+
+/* Ajoute ceci à ton fichier style.css */
+
+.chart-wrapper {
+    position: relative;
+    width: 100%;           /* Prend toute la largeur disponible de la colonne */
+    max-width: 500px;      /* Ne dépasse jamais 500px pour rester lisible */
+    margin: 0 auto;        /* Centre le graphique horizontalement */
+    padding: 10px;         /* Un peu d'espace autour */
+}
+
+/* Optionnel : Si tu veux que le canvas soit toujours carré ou ait un ratio spécifique */
+canvas {
+    /* Chart.js gère généralement bien cela tout seul, 
+       mais assure-toi que le canvas n'a pas de height fixée en CSS dur 
+       qui pourrait déformer le ratio. */
 }

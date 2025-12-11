@@ -5,6 +5,7 @@
     <title>Accueil – Louis Treels</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 
@@ -49,9 +50,30 @@
 
 <main class="container">
     <section class="card">
-        <h2>Accueil</h2>
-        <p>Ici tu mettras ton contenu.</p>
+        <h2>Introduction</h2>
+        <p>
+            Étudiant en deuxième année de BUT Informatique, je développe depuis plusieurs 
+            années une véritable passion dans le domaine. Issu d’un parcours marqué par la 
+            spécialité NSI au lycée, j’ai naturellement choisi d’approfondir mes compétences 
+            dans le développement Java, Web et SQL, tout en explorant des domaines connexes 
+            comme le réseau et la programmation système. 
+            Curieux et persévérant, j’aime relever des défis techniques et collaborer en équipe 
+            pour concevoir des solutions efficaces et bien structurées.<br />
+            Mon parcours m’a appris la rigueur, la résilience et la satisfaction de voir un projet fonctionner de manière pérenne. <br />
+            Pour moi, l’informatique est avant tout un moyen d’expression et de liberté intellectuelle
+             : elle me permet de créer, d’apprendre et de progresser sans cesse. Mon ambition est simple,
+              continuer à grandir au sein d’équipes dynamiques, partager mes idées et contribuer à 
+              des projets à la fois techniques et humains.
+        </p>
     </section>
+
+    <section class="card" id="competences">
+        <h2>Mes compétences techniques</h2>
+        <div class="chart-wrapper">
+            <canvas id="monRadarChart"></canvas>
+        </div>
+    </section>
+
 </main>
 
 <footer class="site-footer">
@@ -83,5 +105,7 @@
         localStorage.setItem('theme', isDark ? 'dark' : 'light');
     });
 </script>
+
+<script src="script.js"></script>
 </body>
 </html>
