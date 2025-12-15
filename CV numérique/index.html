@@ -1,15 +1,13 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Accueil – Louis Treels</title>
+    <title>Louis Treels - CV</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-
-<!-- HEADER -->
 <header class="site-header">
     <div class="header-inner container">
         <div class="profile-block">
@@ -18,7 +16,7 @@
             </div>
             <div>
                 <h1 class="name">Louis Treels</h1>
-                <p class="tagline">Computer Science Student – BUT Informatique</p>
+                <p class="tagline">Étudiant en informatique - IUT Villeneuve d'Ascq</p>
             </div>
         </div>
 
@@ -43,13 +41,13 @@
             <li><a href="projets.html">Projets Académiques & Personnels</a></li>
             <li><a href="interets.html">Centres d'intérêts</a></li>
             <li><a href="contacts.html">Contacts</a></li>
-            <li><a href="cv.html">CV</a></li>
         </ul>
     </div>
 </nav>
 
+
 <main class="container">
-    <section class="card">
+    <section class="card CV">
         <h2>Introduction</h2>
         <p>
             Étudiant en deuxième année de BUT Informatique, je développe depuis plusieurs 
@@ -67,14 +65,156 @@
         </p>
     </section>
 
-    <section class="card" id="competences">
-        <h2>Mes compétences techniques</h2>
-        <div class="chart-wrapper">
-            <canvas id="monRadarChart"></canvas>
-        </div>
-    </section>
+    <div class="layout">
+        
+        <section class="column-left">
+            <section class="card">
+                <h2>Profil</h2>
+                <p>
+                    Volontaire et assidu, j’ai évolué pendant 3 ans au sein de la restauration rapide, du service client à la formation des équipes.
+                    Ce parcours m’a permis d’acquérir rigueur, réactivité et leadership, que je souhaite valoriser dans une nouvelle aventure 
+                    professionnelle plus en accord avec mes ambitions professionnelles futures.
+                </p>
+            </section>
 
-</main>
+            
+            <section class="card">
+                <h2>Savoir-Être</h2>
+                <ul class="bullet-list">
+                    <li>Sens du service client et de l’écoute active</li>
+                    <li>Gestion du stress et des flux élevés en période de forte affluence</li>
+                    <li>Collaboration fluide en équipe</li>
+                    <li>Esprit de leadership positif, capacité à motiver et corriger sans jugement</li>
+                </ul>
+            </section>
+            
+            <section class="card" id="competences">
+                <h2>Compétences techniques</h2>
+                <div class="chart-wrapper">
+                    <canvas id="monRadarChart"></canvas>
+                </div>
+            </section>
+            
+            <section class="card">
+                <h2>Langues</h2>
+                <ul class="bullet-list">
+                    <li>🇫🇷 Français – Langue natale</li>
+                    <li>🇬🇧 Anglais – niveau B2/C1</li>
+                </ul>
+            </section>
+
+            <section class="card">
+                <h2>Contacts</h2>
+                <ul class="contact-list">
+                    <li>📞 +33 7 88 58 33 78</li>
+                    <li>📧 <a href="mailto:louis.treels.pro@gmail.com">louis.treels.pro@gmail.com</a></li>
+                    <li>🏠 59134 Hérlies, France</li>
+                    <li>🚘 Permis B, véhiculé</li>
+                </ul>
+            </section>
+        </section>
+
+        <section class="column-right">
+            <section class="card">
+                <h2>Experience Professionnelle</h2>
+                <article class="item">
+                    <header class="item-header">
+                        <div>
+                            <h3>Contrat étudiant chez McDonald's</h3>
+                            <p class="item-subtitle">Hallennes-lez-Haubourdin, France</p>
+                        </div>
+                        <span class="item-date">Oct. 2022 – Aujourd'hui</span>
+                    </header>
+                    <ul class="bullet-list">
+                        <li>Hôte d’accueil, équipier polyvalent de production et de service, formateur des équipes</li>
+                        <li>Veiller au respect des procédures, corriger avec pédagogie</li>
+                        <li>Participer aux réunions mensuelles de pôle formation</li>
+                    </ul>
+                </article>
+            </section>
+
+            <section class="card">
+                <h2>Personal & Academic Projects</h2>
+
+                <article class="item">
+                    <header class="item-header">
+                        <h3>Moteur de jeu Unity</h3>
+                    </header>
+                    <p class="item-description">
+                        Apprentissage autonome du moteur de jeu: matériaux et textures, modelage de terrain avec "hieghtmaps",
+                        lumières et "shaders", création de mini-jeux et établissement de conditions de victoires par des scripts C#.
+                    </p>
+                </article>
+
+                <article class="item">
+                    <header class="item-header">
+                        <h3>Projet “Nuit du code”</h3>
+                        <span class="item-tag">Python / Pygame</span>
+                    </header>
+                    <p class="item-description">
+                        Développement d'un jeu 2D simple en 6h en utilisant Pygame et  outils annexes (ASCII Art, Musiques)
+                    </p>
+                </article>
+
+                <article class="item">
+                    <header class="item-header">
+                        <h3>Développement Web (BUT1)</h3>
+                        <span class="item-tag">HTML / CSS</span>
+                    </header>
+                    <p class="item-description">
+                        Pages Web statiques pour un service fictif de location de moyens de transports doux et de covoiturage.
+                    </p>
+                </article>
+
+                <article class="item">
+                    <header class="item-header">
+                        <h3>Philosophie Agile</h3>
+                        <span class="item-tag">Java / Scrum</span>
+                    </header>
+                    <p class="item-description">
+                        Développement d'un jeu en Java en appliquant la méthode SCRUM (Sprints réguliers, rétrospectives, radiateur d'informations)
+                    </p>
+                </article>
+            </section>
+
+            <section class="card">
+                <h2>Cursus Scolaire</h2>
+
+                <article class="item">
+                    <header class="item-header">
+                        <div>
+                            <h3>Bachelor Universitaire de Technologie (BUT) en Informatique</h3>
+                            <p class="item-subtitle">
+                                Université de Lille - IUT A, Villeneuve d'Ascq, France
+                            </p>
+                        </div>
+                        <span class="item-date">2024 – Aujourd'hui</span>
+                    </header>
+                    <ul class="bullet-list">
+                        <li>Acquisition de compétence en Java / FX, Développement Web / Backend, SQL / JDBC</li>
+                        <li>Parcours B - Déploiement d'applications communicantes et sécurisées</li>
+                    </ul>
+                </article>
+
+                <article class="item">
+                    <header class="item-header">
+                        <div>
+                            <h3>Baccalauréat Général mention Bien</h3>
+                            <p class="item-subtitle">
+                                Lycée Privé Sainte-Marie Beaucamps-Ligny, France
+                            </p>
+                        </div>
+                        <span class="item-date">2024</span>
+                    </header>
+                    <ul class="bullet-list">
+                        <li>Participation aux Programmes PEI SciencesPo et PEI Scientifique (Cordées de la réussite)</li>
+                        <li>Soutenance orale de fin de programme sur le thème "Onde et Matière"</li>
+                        <li>Sujet "Le camouflage électromagnétique par les métamatériaux"</li>
+                    </ul>
+                </article>
+            </section>
+        </section>
+    </div> </main>
 
 <footer class="site-footer">
     <div class="container footer-inner">

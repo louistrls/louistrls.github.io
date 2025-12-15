@@ -831,43 +831,13 @@ body.dark .interest-content.right {
     font-size: 15px;
 }
 
-
-
-
-
-
-
-
-
-/* ---------- CV PAGE ---------- */
-
-.card {
-    margin: 10px;
-}
-
-
-
-
-
-/* ---------- CURSUS PAGE ---------- */
-
 .logo-timeline {
     width: 10%;
 }
 
-
-/* ---------- CONTACTS PAGE ---------- */
-
 .contact-grid {
     margin: 120px 0 120px 0;
 }
-
-
-
-
-
-
-/* Ajoute ceci à ton fichier style.css */
 
 .chart-wrapper {
     position: relative;
@@ -878,13 +848,38 @@ body.dark .interest-content.right {
 }
 
 #competences {
-    width: 50%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
 }
 
 #competences h2 {
     text-align: center;
 }
 
+
+#competences {
+    width: 100%;
+    text-align: center;
+    height: auto; 
+    /* padding-bottom: 15px;  */
+}
+
+#competences h2 {
+    margin-bottom: 0;      
+    border-bottom: none;   
+    padding-bottom: 0;
+}
+
 .chart-wrapper {
-    margin: 0 0 0 20px;
+    position: relative;
+    width: 100%;
+    max-width: 280px;      
+    margin: -30px 0 0 75px;
+    display: block;
+}
+
+.card {
+    margin-top: 10;
+    margin-bottom: 10;
 }

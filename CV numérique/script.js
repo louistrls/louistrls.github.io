@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
             labels: ['Java', 'Python', 'HTML / CSS', 'SQL / JDBC', 'C', 'C#', 'Unity'],
             datasets: [{
                 label: 'Niveau',
-                data: [60, 55, 75, 40, 45, 45, 60],
+                data: [70, 55, 75, 40, 55, 40, 55],
                 // Couleur de fond (Bleu clair transparent)
                 backgroundColor: 'rgba(54, 162, 235, 0.4)',
                 // Couleur de la ligne (Bleu solide)
