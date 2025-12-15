@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Expérience Professionnelle – Louis Treels</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const current = location.pathname.split("/").pop();
+            document.querySelectorAll(".nav-list a").forEach(link => {
+                if (link.getAttribute("href") === current) {
+                    link.classList.add("active");
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner container">
+        <div class="profile-block">
+            <div class="avatar">
+                <img src="assets/img/portrait.jpg" alt="Louis Treels">
+            </div>
+            <div>
+                <h1 class="name">Louis Treels</h1>
+                <p class="tagline">Étudiant en informatique - IUT Villeneuve d'Ascq</p>
+            </div>
+        </div>
+
+        <div class="header-actions">
+            <div class="contact-mini">
+                <span>📍 Lille, France</span>
+                <span>📧 <a href="mailto:louis.treels.pro@gmail.com">louis.treels.pro@gmail.com</a></span>
+            </div>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                🌙
+            </button>
+        </div>
+  </div>
+</header>
+
+<!-- NAVIGATION -->
+<nav class="site-nav">
+    <div class="container nav-inner">
+        <ul class="nav-list">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="cursus.html">Cursus Académique</a></li>
+            <li><a href="experience.html">Expérience Professionnelle</a></li>
+            <li><a href="projets.html">Projets Académiques & Personnels</a></li>
+            <li><a href="interets.html">Centres d'intérêts</a></li>
+            <li><a href="contacts.html">Contacts</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- CONTENU -->
+<main class="container">
+
+    <!-- INTRO -->
+    <section class="card">
+        <h2>Expérience Professionnelle</h2>
+        <p>Voici un aperçu de mes expériences professionnelles, des missions réalisées et des compétences développées au fil de mon parcours.</p>
+    </section>
+
+    <!-- EXPERIENCE LIST -->
+    <section class="experience-list">
+
+        <!-- EXPERIENCE 1 -->
+        <div class="experience-card">
+            <div class="experience-header">
+                <h3>Job étudiant (12h/semaine)</h3>
+                <span class="experience-date">Octobre 2022 - Aujourd'hui</span>
+            </div>
+            <p class="experience-company">McDonald's - Hallennes-Lez-Haubourdin</p>
+
+            <ul class="experience-details">
+                <li>Formation des nouveaux équipiers</li>
+                <li>Respect des procédures en zone de production et de service</li>
+                <li>Participation aux réunions mensuelles pôle formation</li>
+            </ul>
+
+            <div class="experience-skills">
+                <span class="skill-tag">Sens du service client et de l'écoute active</span>
+                <span class="skill-tag">Gestion du stress et des flux élevés en période de forte affluence</span>
+                <span class="skill-tag">Esprit de leadership positif, motiver et corriger sans jugement</span>
+            </div>
+        </div>
+
+        <!-- EXPERIENCE 2 -->
+        <div class="experience-card">
+            <div class="experience-header">
+                <h3>Stage de découverte (Seconde)</h3>
+                <span class="experience-date">Juin 2022</span>
+            </div>
+            <p class="experience-company">Groupe Tercium & Romain Duhomez - Sainghin-En-Weppes</p>
+
+            <ul class="experience-details">
+                <li>Découverte des métiers du référencement Web (SEO/SEA), du graphisme et du développement Web et App</li>
+                <li>Développement d'une application mobile en accompagnement à mon rapport de stage.</li>
+            </ul>
+
+            <div class="experience-skills">
+                <span class="skill-tag">Découverte du domaine informatique professionnel</span>
+            </div>
+        </div>
+
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <p>© <span id="year"></span> Louis Treels – CV</p>
+        <p>Built with HTML &amp; CSS</p>
+    </div>
+</footer>
+
+<script>
+    // Année automatique
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Toggle dark / light mode
+    const toggle = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    // garder le choix dans le localStorage
+    const storedTheme = localStorage.getItem('theme');
+    if (storedTheme === 'dark') {
+        body.classList.add('dark');
+        toggle.textContent = '☀️';
+    }
+
+    toggle.addEventListener('click', () => {
+        body.classList.toggle('dark');
+        const isDark = body.classList.contains('dark');
+        toggle.textContent = isDark ? '☀️' : '🌙';
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Projets – Louis Treels</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const current = location.pathname.split("/").pop();
+            document.querySelectorAll(".nav-list a").forEach(link => {
+                if (link.getAttribute("href") === current) {
+                    link.classList.add("active");
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+    <div class="header-inner container">
+        <div class="profile-block">
+            <div class="avatar">
+                <img src="assets/img/portrait.jpg" alt="Louis Treels">
+            </div>
+            <div>
+                <h1 class="name">Louis Treels</h1>
+                <p class="tagline">Étudiant en informatique - IUT Villeneuve d'Ascq</p>
+            </div>
+        </div>
+
+        <div class="header-actions">
+            <div class="contact-mini">
+                <span>📍 Lille, France</span>
+                <span>📧 <a href="mailto:louis.treels.pro@gmail.com">louis.treels.pro@gmail.com</a></span>
+            </div>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                🌙
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- NAVIGATION -->
+<nav class="site-nav">
+    <div class="container nav-inner">
+        <ul class="nav-list">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="cursus.html">Cursus Académique</a></li>
+            <li><a href="experience.html">Expérience Professionnelle</a></li>
+            <li><a href="projets.html">Projets Académiques & Personnels</a></li>
+            <li><a href="interets.html">Centres d'intérêts</a></li>
+            <li><a href="contacts.html">Contacts</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- CONTENU -->
+<main class="container">
+
+    <!-- Intro -->
+    <section class="card">
+        <h2>Projets Académiques & Personnels</h2>
+        <p>Voici les projets qui ont marqué mon parcours, entre réalisations académiques, défis techniques et explorations personnelles.</p>
+    </section>
+
+    <!-- FRISE CHRONOLOGIQUE -->
+    <section class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-date">Septembre - Novembre 2025</div>
+          <div class="timeline-content card">
+            <h3>SAÉ 3.02 - Développement d'Applications | Explorations de Labyrinthes</h3>
+            <p class="duration">Durée du projet : 2 mois</p>
+            <h3>Description du projet</h3>
+            <p>
+                Un projet très intéressant mélangeant de nombreuses notions telles que l'utilisation de différents patrons
+                de conception, le développement d'interfaces JavaFX, l'exploration algorithmique de labyrinthes et la récursivité. 
+            </p>
+            <h3>Développement des compétences</h3>
+            <ul>
+                <li>Approfondissement des compétences de développement Java</li>
+                <li>Application des patrons de conception MVC (Model/View/Controller) et Observateur</li>
+                <li>Approfondissement des compétences d'implémentation de vues JavaFX</li>
+                <li>Gestion de dépôt Git</li>
+            </ul>
+            <a href="https://github.com/louistrls/SA-3.02---D-veloppement-d-application-Parcours-de-Labyrinthe-MazeApp-" target="_blank">Dépôt GitHub - Développement Application | Exploration de Labyrinthes</a>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-date">Septembre 2025</div>
+            <div class="timeline-content card">
+                <h3>SAÉ 3.01 - Mini Agile | Dots & Boxes</h3>
+                <p class="duration">Durée du projet : 4 jours divisés en 4 sprints de 2 heures</p>
+                <h3>Description du projet</h3>
+                <p></p>
+                <h3>Développement des compétences</h3>
+                <ul>
+                    <li>Compréhension et application de la méthode Scrum</li>
+                    <li>Renforcement de la cohésion d'équipe</li>
+                    <li>Établissement du leadership (Scrum Master)</li>
+                </ul>
+                <a href="https://github.com/louistrls/SA-3.01---Mini-Agile" target="_blank">Dépôt GitHub - Mini Agile | Dots & Boxes</a>
+            </div>
+        </div>
+
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <p>© <span id="year"></span> Louis Treels – CV</p>
+        <p>Built with HTML &amp; CSS</p>
+    </div>
+</footer>
+
+<script>
+    // Année automatique
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Toggle dark / light mode
+    const toggle = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    // garder le choix dans le localStorage
+    const storedTheme = localStorage.getItem('theme');
+    if (storedTheme === 'dark') {
+        body.classList.add('dark');
+        toggle.textContent = '☀️';
+    }
+
+    toggle.addEventListener('click', () => {
+        body.classList.toggle('dark');
+        const isDark = body.classList.contains('dark');
+        toggle.textContent = isDark ? '☀️' : '🌙';
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
+</script>
+</body>
+</html>
