@@ -19,7 +19,6 @@
 </head>
 <body>
 
-<!-- HEADER -->
 <header class="site-header">
   <div class="header-inner container">
         <div class="profile-block">
@@ -44,7 +43,6 @@
   </div>
 </header>
 
-<!-- NAVIGATION -->
 <nav class="site-nav">
     <div class="container nav-inner">
         <ul class="nav-list">
@@ -58,22 +56,18 @@
     </div>
 </nav>
 
-<!-- CONTENU -->
 <main class="container">
 
-    <!-- INTRO -->
     <section class="card">
         <h2>Expérience Professionnelle</h2>
         <p>Voici un aperçu de mes expériences professionnelles, des missions réalisées et des compétences développées au fil de mon parcours.</p>
     </section>
 
-    <!-- EXPERIENCE LIST -->
     <section class="experience-list">
 
-        <!-- EXPERIENCE 1 -->
         <div class="experience-card">
             <div class="experience-header">
-                <h3>Job étudiant (12h/semaine)</h3>
+                <h3>Job étudiant - Chef d'équipe et préparateur de quart</h3>
                 <span class="experience-date">Octobre 2022 - Aujourd'hui</span>
             </div>
             <p class="experience-company">McDonald's - Hallennes-Lez-Haubourdin</p>
@@ -89,9 +83,19 @@
                 <span class="skill-tag">Gestion du stress et des flux élevés en période de forte affluence</span>
                 <span class="skill-tag">Esprit de leadership positif, motiver et corriger sans jugement</span>
             </div>
+
+            <div class="reflexive-posture">
+                <details>
+                    <summary>Ce que mon expérience en restauration m'apporte en informatique</summary>
+                    <ul>
+                        <li>Rigueur et respect des standards : Le respect strict des procédures en zone de production m'a appris l'importance des protocoles. En informatique, je transpose cette rigueur dans l'application des normes de codage et de sécurité : suivre un processus établi est la clé de la qualité, que ce soit pour un burger ou pour une ligne de code.</li>
+                        <li>Gestion de la complexité sous pression : Les périodes de forte affluence ("le rush") m'ont appris à prioriser les tâches sans perdre en qualité de service. Cette capacité à rester lucide et efficace face à un flux tendu est un atout majeur pour respecter les délais de livraison (deadlines) lors de sprints de développement intensifs.</li>
+                        <li>Transmission et Pédagogie : Ma participation au pôle formation m'a permis de développer des compétences de vulgarisation. Apprendre à un nouvel équipier des gestes techniques m'aide aujourd'hui à mieux expliquer mes choix techniques lors de revues de code ou de présentations de projets en équipe.</li>
+                    </ul>
+                </details>
+            </div>
         </div>
 
-        <!-- EXPERIENCE 2 -->
         <div class="experience-card">
             <div class="experience-header">
                 <h3>Stage de découverte (Seconde)</h3>
@@ -107,6 +111,17 @@
             <div class="experience-skills">
                 <span class="skill-tag">Découverte du domaine informatique professionnel</span>
             </div>
+
+            <div class="reflexive-posture">
+                <details>
+                    <summary>Ce que mon expérience en restauration m'apporte en informatique</summary>
+                    <ul>
+                        <li>Confirmation d'une vocation : Cette première immersion a été le point de départ de mon projet professionnel. Découvrir concrètement le quotidien de développeurs, de graphistes et de SEO/SEA analyst a transformé un simple intérêt pour l'informatique en une véritable ambition de carrière, me menant naturellement vers le BUT Informatique.</li>
+                        <li>Vision 360° du produit numérique : L'initiation au SEO (référencement) et au design m'a appris qu'une application ne se résume pas à ses lignes de code. J'ai compris l'importance de l'expérience utilisateur (UX) et de la visibilité d'un produit, une vision globale qui m'aide aujourd'hui à concevoir des projets plus cohérents et centrés sur l'utilisateur.</li>
+                        <li>Apprentissage de l'autonomie : Le développement d'une application mobile en accompagnement de mon rapport de stage a été mon premier défi technique en autonomie. Cela m'a confronté pour la première fois à la nécessité de chercher des solutions par moi-même, une compétence essentielle que je continue de cultiver chaque jour.</li>
+                    </ul>
+                </details>
+            </div>
         </div>
 
     </section>
@@ -121,14 +136,11 @@
 </footer>
 
 <script>
-    // Année automatique
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Toggle dark / light mode
     const toggle = document.getElementById('theme-toggle');
     const body = document.body;
 
-    // garder le choix dans le localStorage
     const storedTheme = localStorage.getItem('theme');
     if (storedTheme === 'dark') {
         body.classList.add('dark');

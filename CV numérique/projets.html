@@ -16,10 +16,10 @@
             });
         });
     </script>
+    
 </head>
 <body>
 
-<!-- HEADER -->
 <header class="site-header">
     <div class="header-inner container">
         <div class="profile-block">
@@ -44,7 +44,6 @@
     </div>
 </header>
 
-<!-- NAVIGATION -->
 <nav class="site-nav">
     <div class="container nav-inner">
         <ul class="nav-list">
@@ -58,17 +57,43 @@
     </div>
 </nav>
 
-<!-- CONTENU -->
 <main class="container">
 
-    <!-- Intro -->
     <section class="card">
         <h2>Projets Académiques & Personnels</h2>
         <p>Voici les projets qui ont marqué mon parcours, entre réalisations académiques, défis techniques et explorations personnelles.</p>
     </section>
 
-    <!-- FRISE CHRONOLOGIQUE -->
     <section class="timeline">
+
+        <div class="timeline-item">
+            <div class="timeline-date">Décembre 2025 - Janvier 2026</div>
+            <div class="timeline-content card">
+                <h3>SAÉ 3.03 - Déploiement d'une application</h3>
+                <p class="duration">Durée du projet : 1 mois et demi</p>
+                <h3>Description du projet</h3>
+                <p>
+                    Mise en place d'une infrastructure de communication fédérée et sécurisée basée sur le protocole Matrix. L'objectif était de répondre aux besoins critiques d'une entreprise : assurer la confidentialité des échanges via le chiffrement de bout en bout et garantir une accessibilité multi-plateforme. Le déploiement a nécessité la configuration d'un serveur de messagerie (Synapse), d'une base de données PostgreSQL, d'un serveur Nginx (Reverse Proxy) et du client Element Web.
+                </p>
+                <h3>Développement des compétences</h3>
+                <ul>
+                    <li>Déploiement et orchestration d'une infrastructure de services (Synapse, PostgreSQL, Element)</li>
+                    <li>Sécurisation des flux réseau via la mise en place d'un Reverse Proxy (Nginx) et de certificats SSL</li>
+                    <li>Administration système Linux et gestion de l'interopérabilité entre services au sein d'un réseau fédéré</li>
+                </ul>
+                <div class="reflexive-posture">
+                    <details>
+                        <summary>Voir mon analyse du projet</summary>
+                        <ul>
+                            <li>Le défi de l'infrastructure : Ce projet m'a permis de comprendre l'importance de l'interopérabilité. Configurer un serveur Nginx pour qu'il redirige correctement les flux vers Matrix et Element tout en gérant les certificats SSL a été une étape technique clé pour garantir la sécurité et la disponibilité du service.</li>
+                            <li>Prise de conscience sur la sécurité : Au-delà de la simple installation, j'ai pris conscience de la responsabilité d'un administrateur système : le choix d'un protocole décentralisé (Matrix) et du chiffrement n'est pas qu'un détail technique, c'est un engagement envers la protection des données des utilisateurs.</li>
+                            <li>Évolution des compétences : Ce projet a renforcé ma rigueur dans la gestion des services Linux. J'ai appris que le déploiement d'une application professionnelle ne s'arrête pas à son bon fonctionnement, mais inclut sa maintenabilité et sa robustesse face aux pannes.</li>
+                        </ul>
+                    </details>
+                </div>
+                <a href="placeholder" target="_blank">Placeholder - Lien vers le dépot GitLab</a>
+            </div>
+        </div>
 
         <div class="timeline-item">
           <div class="timeline-date">Septembre - Novembre 2025</div>
@@ -87,6 +112,16 @@
                 <li>Approfondissement des compétences d'implémentation de vues JavaFX</li>
                 <li>Gestion de dépôt Git</li>
             </ul>
+            <div class="reflexive-posture">
+                <details>
+                    <summary>Voir mon analyse du projet</summary>
+                    <ul>
+                        <li>Le défi technique : La mise en œuvre des différents patrons de conception a été cruciale pour assurer une synchronisation fluide entre la logique algorithmique de résolution du labyrinthe et l'affichage en temps réel sur l'interface JavaFX. </li>
+                        <li>Prise de recul : Ce projet m'a fait réaliser que la phase de conception (diagrammes UML, choix des designs patterns) fait gagner un temps précieux lors de la phase de développement et de refactorisation du code, surtout sur des structures récursives complexes.</li>
+                        <li>Évolution : Si je devais le refaire, j'approfondirais l'optimisation des algorithmes d'exploration pour gérer des labyrinthes de tailles bien plus importantes.</li>
+                    </ul>
+                </details>
+            </div>
             <a href="https://github.com/louistrls/SA-3.02---D-veloppement-d-application-Parcours-de-Labyrinthe-MazeApp-" target="_blank">Dépôt GitHub - Développement Application | Exploration de Labyrinthes</a>
           </div>
         </div>
@@ -97,13 +132,27 @@
                 <h3>SAÉ 3.01 - Mini Agile | Dots & Boxes</h3>
                 <p class="duration">Durée du projet : 4 jours divisés en 4 sprints de 2 heures</p>
                 <h3>Description du projet</h3>
-                <p></p>
+                <p>
+                    En équipe de 6 personnes, nous avons développé le jeu de stratégie "Dots & Boxes" en Java.
+                    L'objectif était de livrer un produit fonctionnel en suivant un cycle de développement intensif 
+                    (4 sprints de 2h / jour), permettant de simuler les contraintes de temps et de collaboration d'un environnement professionnel.
+                </p>
                 <h3>Développement des compétences</h3>
                 <ul>
                     <li>Compréhension et application de la méthode Scrum</li>
                     <li>Renforcement de la cohésion d'équipe</li>
                     <li>Établissement du leadership (Scrum Master)</li>
                 </ul>
+                <div class="reflexive-posture">
+                    <details>
+                        <summary>Voir mon analyse du projet</summary>
+                        <ul>
+                            <li>Le défi organisationnel : Coordonner 6 développeurs sur des sprints aussi courts a été un véritable challenge de communication. J'ai appris l'importance de décomposer les fonctionnalités en tâches atomiques pour éviter que nous ne travaillions tous sur les mêmes fichiers simultanément.</li>
+                            <li>Prise de recul sur l'Agilité : Mon passage au rôle de Scrum Master m'a permis de comprendre que l'agilité ne sert pas à "coder plus vite", mais à s'adapter mieux. Les phases de rétrospective entre les sprints ont été cruciales pour ajuster notre flux de travail et corriger nos erreurs d'estimation de points d'effort.</li>
+                            <li>Bilan personnel : Cette expérience a transformé ma vision du travail de groupe : la réussite technique du projet dépendait moins de nos talents individuels de codeurs que de notre capacité à prioriser le Produit Minimum Viable collectivement.</li>
+                        </ul>
+                    </details>
+                </div>
                 <a href="https://github.com/louistrls/SA-3.01---Mini-Agile" target="_blank">Dépôt GitHub - Mini Agile | Dots & Boxes</a>
             </div>
         </div>
@@ -120,14 +169,11 @@
 </footer>
 
 <script>
-    // Année automatique
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Toggle dark / light mode
     const toggle = document.getElementById('theme-toggle');
     const body = document.body;
 
-    // garder le choix dans le localStorage
     const storedTheme = localStorage.getItem('theme');
     if (storedTheme === 'dark') {
         body.classList.add('dark');

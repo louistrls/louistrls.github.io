@@ -883,3 +883,8 @@ body.dark .interest-content.right {
     margin-top: 10;
     margin-bottom: 10;
 }
+
+.reflexive-posture {
+    background-color: #596475;
+    font-style: italic;
+}
