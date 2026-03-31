@@ -47,7 +47,7 @@
 
 
 <main class="container">
-    <section class="card CV">
+    <section class="card intro-dashboard">
         <h2>Introduction</h2>
         <p>
             Étudiant en deuxième année de BUT Informatique, je développe depuis plusieurs 
@@ -63,31 +63,44 @@
               continuer à grandir au sein d’équipes dynamiques, partager mes idées et contribuer à 
               des projets à la fois techniques et humains.
         </p>
+        <p class="reflexive-posture-intro">
+            Mon parcours au sein de l'IUT m'a appris à transformer des défis techniques en opportunités d'apprentissage, 
+            développant ainsi une autonomie et une résilience essentielles en milieu professionnel.
+        </p>
     </section>
 
-    <div class="layout">
+    <section class="card chart-main-section">
+        <h2>Mes Compétences & Soft Skills</h2>
+        <div class="chart-container-large">
+            <canvas id="monRadarChart"></canvas>
+        </div>
+    </section>
+
+    <div class="dashboard-grid">
+        <section class="card teaser">
+            <h2>Expérience Pro</h2>
+            <article>
+                <h3>Équipier Formateur - McDonald's</h3>
+                <p>Gestion du stress, leadership et pédagogie en environnement exigeant.</p>
+                <a href="experience.html" class="btn-more">Voir mon analyse réflexive →</a>
+            </article>
+        </section>
+
+        <section class="card teaser">
+            <h2>Derniers Projets</h2>
+            <article>
+                <h3>Déploiement & Automatisation</h3>
+                <p>Infrastructure sécurisée Matrix et ERP Dolibarr (Scripts Shell, Docker).</p>
+                <a href="projets.html" class="btn-more">Détails des compétences acquises →</a>
+            </article>
+        </section>
+    </div>
+</main>
+
+    <!-- <div class="layout">
         
         <section class="column-left">
-            <section class="card">
-                <h2>Profil</h2>
-                <p>
-                    Volontaire et assidu, j’ai évolué pendant 3 ans au sein de la restauration rapide, du service client à la formation des équipes.
-                    Ce parcours m’a permis d’acquérir rigueur, réactivité et leadership, que je souhaite valoriser dans une nouvelle aventure 
-                    professionnelle plus en accord avec mes ambitions professionnelles futures.
-                </p>
-            </section>
-
-            
-            <section class="card">
-                <h2>Savoir-Être</h2>
-                <ul class="bullet-list">
-                    <li>Sens du service client et de l’écoute active</li>
-                    <li>Gestion du stress et des flux élevés en période de forte affluence</li>
-                    <li>Collaboration fluide en équipe</li>
-                    <li>Esprit de leadership positif, capacité à motiver et corriger sans jugement</li>
-                </ul>
-            </section>
-            
+                        
             <section class="card" id="competences">
                 <h2>Compétences techniques</h2>
                 <div class="chart-wrapper">
@@ -100,16 +113,6 @@
                 <ul class="bullet-list">
                     <li>🇫🇷 Français – Langue natale</li>
                     <li>🇬🇧 Anglais – niveau C1</li>
-                </ul>
-            </section>
-
-            <section class="card">
-                <h2>Contacts</h2>
-                <ul class="contact-list">
-                    <li>📞 +33 7 88 58 33 78</li>
-                    <li>📧 <a href="mailto:louis.treels.pro@gmail.com">louis.treels.pro@gmail.com</a></li>
-                    <li>🏠 59134 Herlies, France</li>
-                    <li>🚘 Permis B, véhiculé</li>
                 </ul>
             </section>
         </section>
@@ -134,7 +137,7 @@
             </section>
 
             <section class="card">
-                <h2>Personal & Academic Projects</h2>
+                <h2>Projets Académiques</h2>
 
                 <article class="item">
                     <header class="item-header">
@@ -215,7 +218,7 @@
             </section>
         </section>
     </div> </main>
-
+ -->
 <footer class="site-footer">
     <div class="container footer-inner">
         <p>© <span id="year"></span> Louis Treels – CV</p>
@@ -224,14 +227,11 @@
 </footer>
 
 <script>
-    // Année automatique
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Toggle dark / light mode
     const toggle = document.getElementById('theme-toggle');
     const body = document.body;
 
-    // garder le choix dans le localStorage
     const storedTheme = localStorage.getItem('theme');
     if (storedTheme === 'dark') {
         body.classList.add('dark');
